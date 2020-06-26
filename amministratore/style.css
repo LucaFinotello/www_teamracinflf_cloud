@@ -1,0 +1,196 @@
+*{
+padding: 0em;
+margin: 0em;
+}
+
+body{
+font-family: 'Montserrat', sans-serif;
+color:#191970;
+}
+
+#header{
+	padding-top:2%;
+	width:90%;
+	margin:0 auto;
+	height:3em;
+	border-bottom:1em solid #0000FF;
+	color:#0000FF;
+	text-align:center;
+}
+
+#header h1{	
+	font-family: 'Cinzel Decorative', cursive;
+	font-size:2em;
+}
+
+#main{	
+	width:90%;
+	display:table;
+	margin:0 auto;
+	margin-top:2%;
+}
+
+.container { 
+	width:100%;
+	padding:0em;
+	}
+	
+.menu {
+	width: 100%;
+	height: 1.7em;
+	border-top: 1px solid #000099;
+	border-bottom: 1px solid #000099;
+	background: #ffe035;
+	}
+
+	.menu ul {
+	float: left;
+	margin-bottom:4%;
+	border-top: 0px solid #D76120;
+	border-bottom: 0px solid #D76120;
+	border-left: 0px solid #D76120;
+	list-style:none;
+	font:0.9em Trebuchet MS;
+	}
+
+	.menu ul li ul li {
+	list-style:none;
+	text-align: left;
+	}
+.menu ul li {
+	float:left;
+	width:9.5em;
+	height: 1.7em;
+	border-right: 0px solid #009;
+	color: #d76120;
+	text-align: left;
+	background: #ffe035;
+	}
+
+.menu ul a:link,.menu ul a:visited {
+	display: block;
+	padding: 4px 16px;
+	color: #009;
+	text-decoration: none;
+	}
+
+.menu ul a:hover, .menu ul a:focus, .menu ul a:active{
+	background-color: #000099;
+	color: #ffffff;
+	text-decoration: none;
+	}
+
+.menu ul li ul {
+	display: none;
+	}
+
+.menu ul li:hover ul {
+	display: block;
+	position: absolute;
+	z-index:1;
+	width:12em;
+	padding: 0;
+	margin: 0 0 0 -1px;
+	border:1px solid #009;
+	font-size:.8em;
+	}
+
+.menu li li {
+	border-bottom:0px solid 009;
+	width: 12em;
+	}
+
+#contenuto{
+	width:100%;
+	float:left;
+}
+
+
+.tabella{
+	padding-bottom:1%;
+	padding-left:18%;
+}
+
+table {
+	border: 2px solid black;
+	border-collapse: separate;
+	border-spacing: 1%;
+}
+
+tr {
+    background-color: #ddd;
+}
+
+th {
+    background-color: #ddd;
+    border: 1px solid #fff;
+    color: red;
+}
+
+.capo{
+	display:block;
+}
+
+#footer{
+	text-align:center;
+	width:90%;
+	margin:0 auto;
+	margin-top:1%;
+	margin-bottom:2%;
+	background: #0000FF;
+	color: #FFFFFF;
+	height:2em;
+}
+
+textarea {
+    font-size: 12px;
+    height: 15em;
+    width: 100%;
+    overflow: scroll;
+}
+
+.Box_Contenitore {
+	border:1px solid #87CEEB;
+	margin:0.5%;
+	padding:2%;
+	display:inline;
+	width:44%;
+	height:23em;
+	float:left;
+	background:#DDDDDD;
+}				  
+
+.Box_ContenitoreOverflow {
+	display:inline;
+	border:1px solid #87CEEB;
+	height:8em;
+	width:21em;
+	overflow:scroll;
+	position:absolute;
+	margin-top:2%;
+}
+.Box_Contenitore img{
+	margin:0 auto;
+	display:block;
+	width:16em;
+	height:11em;
+}
+
+.immagini{
+	float:left;
+	display:inline;
+	margin:1%;
+}
+
+.immagini img{
+	margin:0 auto;
+	display:block;
+	width:10em;
+	height:7em;
+}
+
+.centra{
+	margin-top:1%;
+	margin-left:45%;
+	margin-bottom:1%;
+}

@@ -1,0 +1,459 @@
+/* inizio Generali */
+*{
+	padding: 0em;
+	margin: 0em;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background-image: linear-gradient(to top right, #c0c0c0 38%, #ffd700 100%);
+	color:#191970;
+}
+
+#header{
+	padding-top:2%;
+	width:90%;
+	margin:0 auto;
+	height:3em;
+	border-bottom:1em solid #0000FF;
+	color:#0000FF;
+	text-align:center;
+}
+
+#header h1{
+	font-family: 'Cinzel Decorative', cursive;
+	font-size:2em;
+}
+
+h2{
+	font-size:1.3em;
+	color:#000099;
+	margin-top:2%;
+	margin-bottom:2%;
+	clear:both;
+	padding:0.5%;
+}
+
+#main{
+	width:90%;
+	display:table;
+	margin:0 auto;
+	margin-top:2%;
+}
+
+#menu{	
+	float:left;
+	width:15%;
+}
+
+#menu ul{
+	list-style-type: none;
+}
+
+#menu li{
+	height:2em;
+}
+
+#menu a{
+	text-decoration:none;
+	color:#708090;
+}
+
+#menu a:hover{
+	color:#87CEEB;
+}
+
+#contenuto{
+	width:85%;
+	float:left;
+}
+
+	
+#path{
+	width:40%;
+	padding-bottom:1%;
+}
+
+.capo{
+	display:block;
+}
+
+#footer{
+	text-align:center;
+	width:90%;
+	margin:0 auto;
+	margin-top:1%;
+	margin-bottom:2%;
+	background: #0000FF;
+	color: #FFFFFF;
+	height:2em;
+}
+
+/* fine generali */
+
+/* Inizio Home */
+
+table {
+	margin-top:1%;
+	border: 2px solid #0000CC;
+	border-collapse: separate;
+	border-spacing: 1%;
+	text-align:center;
+}
+
+tr {
+    background-color: #66CCFF;
+}
+
+th {
+    background-color: #3366FF;
+    border: 1px solid #fff;
+    color: #00FF00;
+}
+
+.tabella{
+	margin-bottom:1%;
+	width:36%;
+	margin-left:25%;
+}
+
+/* fine Home */
+
+/* Inizio Login*/
+
+#form {
+    width: 40em;
+    margin: 50px auto;
+    background: #969696;
+    padding: 1em;
+    overflow: hidden;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#form input, textarea { 
+    color: #dedede; 
+    font-family: Verdana, sans-serif;
+    margin: 10px 0;
+}
+
+
+ 
+#form input, textarea { 
+    background: #1C1C1C;
+    border: 1px solid #323232;
+    color: #fff; 
+    height: 30px; 
+    line-height: 30px; 
+    width: 40%; 
+    padding: 0 10px; 
+}
+ 
+ 
+#form textarea {
+    background: #1C1C1C;
+    font-size: 12px;
+    height: 15em;
+    width: 60%;
+}
+
+/* Fine Login*/
+
+/* Inizio Home1*/
+
+.container { 
+	width:8.5em;
+	padding:0em;
+	float:right;
+	}
+
+.menu1 {
+	width: 100%;
+	height: 2.2em;
+	border-top: 1px solid #000099;
+	border-bottom: 1px solid #000099;
+	background: #ffe035;
+	}
+
+	.menu1 ul {
+	float: left;
+	margin-bottom:4%;
+	border-top: 0px solid #D76120;
+	border-bottom: 0px solid #D76120;
+	border-left: 0px solid #D76120;
+	list-style:none;
+	font:0.9em Trebuchet MS;
+	}
+
+	.menu1 ul li ul li {
+	list-style:none;
+	text-align: left;
+	}
+.menu1 ul li {
+	float:left;
+	width:9.5em;
+	height: 1.7em;
+	border-right: 0px solid #009;
+	color: #d76120;
+	text-align: left;
+	background: #ffe035;
+	}
+
+.menu1 ul a:link,.menu1 ul a:visited {
+	display: block;
+	padding: 4px 16px;
+	color: #009;
+	text-decoration: none;
+	}
+
+.menu1 ul a:hover, .menu1 ul a:focus, .menu1 ul a:active{
+	background-color: #000099;
+	color: #ffffff;
+	text-decoration: none;
+	}
+
+.menu1 ul li ul {
+	display: none;
+	}
+
+.menu1 ul li:hover ul {
+	display: block;
+	position: absolute;
+	z-index:1;
+	width:12em;
+	padding: 0;
+	margin: 0 0 0 -1px;
+	border:1px solid #009;
+	font-size:.8em;
+	}
+
+.menu1 li li {
+	border-bottom:0px solid 009;
+	width: 12em;
+	}
+	
+.immagin{
+	float:left;
+	display:inline;
+	padding-right:5%;
+	margin-left:2%;
+	
+}
+
+.immagin img{
+	margin:0 auto;
+	display:block;
+	width:30px;
+	height:30px;
+}
+
+/* fine Home1*/
+
+/* Inizio Profilo*/
+
+#profilo{
+	background: #969696;
+	margin-top:2em;
+	padding-top:5%;
+	padding-bottom:5%;
+	padding-left:30%;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#profilo input{
+	background: #1C1C1C;
+	border: 1px solid #323232;
+    color: #fff; 
+	 height: 20px; 
+	 padding: 0 10px;
+	font-family: Verdana, sans-serif;
+    margin: 5px 0;
+}
+
+/* Fine Profilo*/
+
+/* Inizio Circuiti*/
+
+#field{
+	margin-top:1%;
+	padding-top:1%;
+}
+
+.Box_Contenitore {
+	border:1px solid #87CEEB;
+	margin:0.5%;
+	padding:2%;
+	display:inline;
+	width:44%;
+	height:23em;
+	float:left;
+	background:#DDDDDD;
+}		
+
+.Box_Contenitore img{
+	margin:0 auto;
+	display:block;
+	width:16em;
+	height:11em;
+}
+
+/* Fine Circuiti*/	
+
+/* Inizio dettagli*/
+
+.centra{
+	margin-top:6%;
+	margin-left:5%;
+}
+
+/* Fine dettagli*/
+
+/* Inizio Biglietti*/
+
+.sposta{
+	margin-top:3%;
+}
+
+.alignRight { text-align:right; }
+
+#container { 
+	width:48em; 
+	margin:1%;
+	text-align:left; 
+	float:left;
+	display:inline; }
+
+.item_name {
+	font-size:12px;
+	margin:10px 0;
+	padding:0;
+}
+
+.immagine{
+	float:left;
+	display:inline;
+	padding:2%;
+	margin-left:2%;
+	
+}
+
+.immagine img{
+	margin:0 auto;
+	display:block;
+	width:7.5em;
+	height:7.5em;
+}
+
+.item_size { font-size:12px; }
+
+.item_add {
+	margin:10px 5px;
+	padding:4px; 
+	background:#0033FF;
+	color:#FFFFFF;
+	border:none;
+	text-transform: uppercase; 
+	font-size:9px;
+	cursor:pointer;
+}
+
+.item_price{
+	font-weight:bold;
+	font-size:14px;
+	color:#cc0000;
+	margin:10px 5px;
+}
+
+#carello{
+	margin-top: 2%;
+}
+
+
+/* STILI CARRELLO */
+.simpleCart_items {
+	float:left; 
+	display:inline;
+	width:100%;
+	background:#EEEEEE;
+	padding-bottom:10px;
+}
+
+.itemContainer, .cartHeaders {
+	width:100%;
+	float:left;
+	display:inline;
+	border-bottom:1px solid #CCCCCC;
+	padding-bottom:10px;
+}
+
+.cartHeaders {
+	font-weight:bold;
+	font-size:11px;
+	color: #666666;
+}
+
+.itemContainer div, .cartHeaders div {
+	float:left;
+	display:inline;
+	border-right:1px solid #CCCCCC;
+	margin:10px 0 0 0;
+	text-align:center;
+	width:80px;
+}
+
+div.itemName {
+	font-weight:bold;
+	width:200px;
+}
+
+div.itemTotal {
+	border-right:none;
+}
+
+
+#cartTotal {
+	text-align:right;
+	float:left;
+	width:100%;
+	margin:20px 0;
+}
+
+#cartTotal .simpleCart_total, .simpleCart_shippingCost, .simpleCart_finalTotal {
+	margin-right:15px;
+	padding:5px;
+	background:#EEEEEE;
+	font-weight:bold;
+}
+
+
+/* STILI BOTTONI CHECKOUT / SVUOTA CARRELLO */
+.simpleCart_empty{
+	color:#FFFFFF;
+	background:#CC0000;
+	font-size:10px;
+	padding:5px;
+	margin-left:5px;
+	text-transform:uppercase;
+}
+
+.simpleCart_checkout{
+	color:#FFFFFF;
+	background: #00CC00;
+	font-size:10px;
+	padding:5px;
+	margin-left:5px;
+	text-transform:uppercase;
+}
+
+/* Fine Biglietti*/
+
+/* Inizio Contatti*/
+#contatti{
+	margin-left: 40%;
+	margin-top:3%;
+}
+
+/*Fine Contatti*/
