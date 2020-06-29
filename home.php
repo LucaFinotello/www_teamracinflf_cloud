@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<link rel="icon" href="immagini/favicon.ico"/>
-		<title>Home- Team rancing</title>
+		<title>Home- Team racing</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="title" content="" />
@@ -21,11 +21,31 @@
         <link rel="shortcut icon" href="immagini/favicon.ico" type="image/x-icon"/>
 	</head>	
 	<body>
+    <!--<input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <h2 class="logo">
+            <a href="www.ioeweb.it/">ioeweb.it</a>
+        </h2>
+        <ul>
+            <li><a href="#1">Uno </a>
+            <li><a href="#2">Due</a>
+            <li><a href="#3">Tre</a>
+            <li><a href="#4">Quattro</a>
+            <li><a href="#5">Cinque</a>
+            <li><a href="#6">Sei</a>
+            <li><a href="#7">Sete</a>
+        </ul>
+    </nav>-->
+
+
 	<div id="header">
 		<h1>Team racing Luca & c.</h1>
 	</div>
 		<div id="main">
-			<div id="menu"> 
+            <input type="checkbox" id="nav-toggle" hidden>
+            <label for="nav-toggle" class="nav-toggle" onclick></label>
+			<div id="menu" class="nav">
 				<ul>
 					<li>Home</li>
 					<li><a href="iscrizione.php">Iscrizione</a></li>
