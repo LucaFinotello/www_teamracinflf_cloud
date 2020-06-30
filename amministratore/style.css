@@ -194,3 +194,15 @@ textarea {
 	margin-left:45%;
 	margin-bottom:1%;
 }
+
+.inputDati {
+	background: transparent;
+	border: none;
+	text-align: center;
+}
+
+@media only screen and (max-width: 414px) {
+	#header h1 {
+		font-size: 25px;
+	}
+}

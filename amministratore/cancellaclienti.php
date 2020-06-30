@@ -71,8 +71,8 @@
 		</div>
 		<div id="contenuto">
 			<?php
-				$nome = $_POST["nome"];
-				$strsql = "delete from clienti where nome = '$nome'";
+				$id = $_POST["id"];
+				$strsql = "delete from clienti where id = '$id'";
 				$risultato = mysqli_query($conn, $strsql);
 				if (! $risultato)
 				  {

@@ -71,12 +71,13 @@
 		</div>
 		<div id="contenuto">
 			<?php
+                $id = $_POST["id"];
 				$nome = $_POST["nome"];
 				$cognome = $_POST["cognome"];
 				$email = $_POST["email"];
 				$username = $_POST["username"];
 				$password = $_POST["password"];
-				$strsql = "update clienti set email = '$email', username= '$username', password='$password' where nome = '$nome'";
+				$strsql = "update clienti set email = '$email', username= '$username', password='$password' where id = '$id'";
 				$risultato = mysqli_query($conn, $strsql);
 				if (!$risultato)
 				  {
