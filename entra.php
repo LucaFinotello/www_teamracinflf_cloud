@@ -4,9 +4,7 @@
 	include ('header.html');
 ?>
     <div id="main">
-        <div id="menu">
-            <?php include ('menu.html');?>
-        </div>
+        <?php include('findDevice.php') ?>
         <div id="contenuto">
             <span id="path">Ti trovi in: <a href="home.php">Home</a> &#187; Login</span>
             <div id="form">
