@@ -45,7 +45,7 @@ include_once('mysql-fix.php');
 						?></a>
 					   <ul>
 							<li><a href="loggati/profilo.php">Modifica profilo</a></li>
-							<li><a href="modifica.php">Modifica password</a></li>
+							<li><a href="loggati/modifica.php">Modifica password</a></li>
 							<li><a href="feedback1.php">Feedback</a></li>
 							<li><a href="loggati/elimina.php">Elimina account</a></li>
 							<li><a href="logout.php">Logout</a></li>

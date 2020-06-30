@@ -8,4 +8,17 @@
         <li><a href="circuiti.php">Circuiti</a></li>
         <li><a href="contatti.php">Contatti</a></li>
     </ul>
+    <br><br>
+    <ul>
+        <li><a href="#"><?php echo $_SESSION['username'];
+                                $q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
+                                ?></a>
+            <ul>
+                <li><a href="profilo.php">Modifica profilo</a></li>
+                <li><a href="modifica.php">Modifica password</a></li>
+                <li><a href="elimina.php">Elimina account</a></li>
+                <li><a href="../logout.php">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

@@ -287,8 +287,8 @@ th {
 	margin:0.5%;
 	padding:2%;
 	display:inline;
-	width:44%;
-	height:23em;
+	width:34vw;
+	height:33vh;
 	float:left;
 	background:#DDDDDD;
 }		
@@ -860,5 +860,9 @@ body {
 
 	#form {
 		width: 80vw;
+	}
+
+	.container{
+		display: none;
 	}
 }

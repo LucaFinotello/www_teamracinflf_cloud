@@ -6,25 +6,25 @@ include('header.html')
 ?>
 		<div id="main">
 			<?php
-            include('menuLoggin.html')
+            include('findDevice.php')
             ?>
 		<div id="contenuto">
 		<span id="path">Ti trovi in: Home</span>
 			<div class="container">
-			<div class="menu1">
-				<ul>
-					<li><a href="#"><?php echo $_SESSION['username'];
-									$q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
-						?></a>
-					   <ul>
-							<li><a href="profilo.php">Modifica profilo</a></li>
-							<li><a href="../modifica.php">Modifica password</a></li>
-							<li><a href="elimina.php">Elimina account</a></li>
-							<li><a href="../logout.php">Logout</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+                <div class="menu1">
+                    <ul>
+                        <li><a href="#"><?php echo $_SESSION['username'];
+                                $q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
+                                ?></a>
+                            <ul>
+                                <li><a href="profilo.php">Modifica profilo</a></li>
+                                <li><a href="modifica.php">Modifica password</a></li>
+                                <li><a href="elimina.php">Elimina account</a></li>
+                                <li><a href="../logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 			</div>
 			<h2>L'UNICO SERVIZIO ON LINE IN CUI PUOI TROVARE DI TUTTO SULLE MOTO</h2>
 			<div class="tabella">
@@ -57,8 +57,6 @@ include('header.html')
             </a>
 		</div>
 	</div>
-	<div id="footer">
-		Benvenuto nel nostro sito
-	</div>
-	</body>
-</html>
+<?php
+include ('footer.html');
+?>
