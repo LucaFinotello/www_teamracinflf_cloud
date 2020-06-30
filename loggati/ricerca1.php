@@ -28,17 +28,18 @@
 				<form action="ricerca1.php" method="POST">
 					<fieldset>
 						<legend>ricerca circuito</legend>
-						Circuito: <input name="circuito" type="text" value=""/>
-						Stato: <input name="stato" type="text" value=""/>
-						Paese: <input name="paese" type="text" value=""/>
+						Circuito: <input name="circuito" type="text" value="<?php echo $_POST['circuito'] ?>" required/>
+						Stato: <input name="stato" type="text" value="<?php $_POST['stato']?>" required/>
+						Paese: <input name="paese" type="text" value="<?php $_POST['paese']?>" required/>
 						<input type="submit" name="invia" value="invia">
+						<<input type="reset" name="annulla" value="annulla">
 					</fieldset>
 				</form>
 				<?php
 			$circuito= $_POST["circuito"];
 			$stato= $_POST["stato"];
 			$paese= $_POST["paese"];
-			$strsql = "select * from circuiti where circuito='$circuito' or stato='$stato' or paese='$paese'";
+			$strsql = "select * from circuiti where circuito='$circuito' and stato='$stato' and paese='$paese'";
 			$risultato = mysqli_query($conn, $strsql);
 			if (! $risultato)
 			  {
@@ -56,7 +57,7 @@
 						echo "<form action='dettagli1.php' method='POST'>";
 						echo "<div class='Box_Contenitore'><h2>".$riga["circuito"]."</h2>";
 						echo "<input readonly name='id' type='text' value=".$riga["id"]." hidden='false'>";
-						echo "<img src='immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'>";
+						echo "<img src='../immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'>";
 						echo "<input type='submit' name='dettagli' value='dettagli' /></div>";
 						echo "</form>";
 						$riga = mysqli_fetch_array($risultato);

@@ -29,9 +29,9 @@
 				<form action="ricerca1.php" method="POST">
 					<fieldset>
 						<legend>ricerca circuito</legend>
-						Circuito: <input name="circuito" type="text" value=""/>
-						Stato: <input name="stato" type="text" value=""/>
-						Paese: <input name="paese" type="text" value=""/>
+						Circuito: <input name="circuito" type="text" value="" required/>
+						Stato: <input name="stato" type="text" value="" required/>
+						Paese: <input name="paese" type="text" value="" required/>
 						<input type="submit" name="invia" value="invia">
 					</fieldset>
 				</form>

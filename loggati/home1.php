@@ -45,12 +45,12 @@ include('header.html')
 			In caso di mancate informazioni contatateci via e-mail. RISPONDEREMO AL PI&Ugrave; PRESTO.</p> 
 			<p> Ci trovate anche su facebook </p>
 			&nbsp
-            <a href="TeamRacing">
+            <a href="../TeamRacing">
                 <div class="Box_Contenitore">
                     <img src="../immagini/teamracing.png"> TeamRacing App
                 </div>
             </a>
-            <a href="RidingSchool">
+            <a href="../RidingSchool">
                 <div class="Box_Contenitore">
                     <img src="../immagini/ridingschool.png" >RidingSchool App
                 </div>

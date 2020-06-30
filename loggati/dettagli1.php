@@ -42,7 +42,7 @@
 					while ($riga)
 					{
 						echo "<div><h1 class='centra'>".$riga["circuito"]."</h1>";
-						echo "<div class='immagine'><img class='immagini' src='immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'></div>";
+						echo "<div class='immagine'><img class='immagini' src='../immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'></div>";
 						echo "<span class='capo'>Stato: ".$riga["stato"]."</span>";
 						echo "<span class='capo'>Paese: ".$riga["paese"]."</span>";
 						echo "<span class='capo'>Descrizione: ".$riga["descrizione"]."</span>";
