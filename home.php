@@ -18,7 +18,7 @@
 					<tr>
 						<td> Finotello </td>
 						<td> Luca </td>
-						<td> <a href="contatti.php">teamracinglf@gmail.com</a> </td>
+						<td> <a href="loggati/contatti.php">teamracinglf@gmail.com</a> </td>
 					</tr>
 				</table>
 			</div>

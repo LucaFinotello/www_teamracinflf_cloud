@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include("db_con.php");
-include_once('mysql-fix.php');
+	include("../db_con.php");
+include_once('../mysql-fix.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-strict.dtd">
 <html>
@@ -14,8 +14,8 @@ include_once('mysql-fix.php');
 		<meta name="keywords" content="team-racing" />
 		<meta name="language" content="italian it" />
 		<meta name="author" content="" />
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
-		<script type="text/javascript" src="javascript/simpleCart.js"></script>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<script type="text/javascript" src="../javascript/simpleCart.js"></script>
 		<script type="text/javascript">
 			simpleCart.email = "luca.finotello@gmail.com";
 			simpleCart.checkoutTo = PayPal;
@@ -41,7 +41,7 @@ include_once('mysql-fix.php');
 					<li>Biglietti</li>
 					<li><a href="vendita moto.php">Negozio moto</a></li>
 					<li><a href="contatti.php">Contatti</a></li>
-					<li><a href="feedback.php">Feedback</a></li>
+					<li><a href="../feedback.php">Feedback</a></li>
 				</ul>
 			</div>
 		<div id="contenuto">
@@ -54,10 +54,10 @@ include_once('mysql-fix.php');
 						?></a>
 					   <ul>
 							<li><a href="profilo.php">Modifica profilo</a></li>
-							<li><a href="modifica.php">Modifica password</a></li>
-							<li><a href="feedback1.php">Feedback</a></li>
+							<li><a href="../modifica.php">Modifica password</a></li>
+							<li><a href="../feedback1.php">Feedback</a></li>
 							<li><a href="elimina.php">Elimina account</a></li>
-							<li><a href="logout.php">Logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 						</ul>
 					</li>
 				</ul>

@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include("db_con.php");
-include_once('mysql-fix.php');
+	include("../db_con.php");
+include_once('../mysql-fix.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-strict.dtd">
 <html>
@@ -14,10 +14,10 @@ include_once('mysql-fix.php');
 		<meta name="keywords" content="team-racing" />
 		<meta name="language" content="italian it" />
 		<meta name="author" content="" />
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Shadows+Into+Light+Two|Cherry+Cream+Soda|Cinzel+Decorative" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="immagini/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="../immagini/favicon.ico" type="image/x-icon"/>
 	</head>	
 	<body>
 	<div id="header">
@@ -31,7 +31,7 @@ include_once('mysql-fix.php');
 					<li><a href="news.php">News</a></li>
 					<li><a href="circuiti.php">Circuiti</a></li>
 					<li><a href="contatti.php">Contatti</a></li>
-					<li><a href="feedback.php">Feedback</a></li>
+					<li><a href="../feedback.php">Feedback</a></li>
 				</ul>
 			</div>
 		<div id="contenuto">
@@ -44,9 +44,9 @@ include_once('mysql-fix.php');
 						?></a>
 					   <ul>
 							<li><a href="profilo.php">Modifica profilo</a></li>
-							<li><a href="modifica.php">Modifica password</a></li>
+							<li><a href="../modifica.php">Modifica password</a></li>
 							<li><a href="elimina.php">Elimina account</a></li>
-							<li><a href="logout.php">Logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -57,7 +57,7 @@ include_once('mysql-fix.php');
                 $q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
                 while($riga = mysqli_fetch_assoc($q)){
                     if($riga['image'] == ""){
-                    echo "<img width='90' height='100' src='immagini/default.jpg' alt='Default Profile Pic'>";
+                    echo "<img width='90' height='100' src='../immagini/default.jpg' alt='Default Profile Pic'>";
                     } else {
                             echo "<img width='90' height='100' src='immagini/".$riga['image']."' alt='Profile Pic'>";
                            }

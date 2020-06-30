@@ -1,12 +1,7 @@
 <?php
 	session_start();
-	include("db_con.php");
-include_once('mysql-fix.php');
-    
-	if(isset($_POST['submit'])){
-        move_uploaded_file($_FILES['file']['tmp_name'],"immagini/".$_FILES['file']['name']);
-        $q = mysqli_query("UPDATE clienti SET image = '".$_FILES['file']['name']."' WHERE username = '".$_SESSION['username']."'");
-    }		
+	include("../db_con.php");
+include_once('../mysql-fix.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-strict.dtd">
 <html>
@@ -19,10 +14,9 @@ include_once('mysql-fix.php');
 		<meta name="keywords" content="team-racing" />
 		<meta name="language" content="italian it" />
 		<meta name="author" content="" />
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Shadows+Into+Light+Two|Cherry+Cream+Soda|Cinzel+Decorative" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="immagini/favicon.ico" type="image/x-icon"/>
 	</head>	
 	<body>
 	<div id="header">
@@ -32,10 +26,16 @@ include_once('mysql-fix.php');
 			<div id="menu"> 
 				<ul>
 					<li><a href="home1.php">Home</a></li>
-					<li><a href="classifica.php">Classifica</a></li>
+					<li><a href="classifica motogp.php">MotoGP</a></li>
+					<li><a href="moto2.php">Moto2</a></li>
+					<li><a href="moto3.php">Moto3</a></li>
 					<li><a href="news.php">News</a></li>
+					<li><a href="moto d'epoca.php">Moto d'epoca</a></li>
 					<li><a href="circuiti.php">Circuiti</a></li>
+					<li><a href="../vendita%20biglietti.php">Biglietti</a></li>
+					<li><a href="../vendita%20moto.php">Negozio moto</a></li>
 					<li><a href="contatti.php">Contatti</a></li>
+					<li><a href="../feedback.php">Feedback</a></li>
 				</ul>
 			</div>
 		<div id="contenuto">
@@ -48,26 +48,18 @@ include_once('mysql-fix.php');
 						?></a>
 					   <ul>
 							<li>Modifica profilo</li>
-							<li><a href="modifica.php">Modifica password</a></li>
+							<li><a href="../modifica.php">Modifica password</a></li>
+							<li><a href="../feedback1.php">Feedback</a></li>
 							<li><a href="elimina.php">Elimina account</a></li>
-							<li><a href="logout.php">Logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 			</div>
 			<div id="profilo">
-            <?php
-                $q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
-                while($riga = mysqli_fetch_assoc($q)){
-                    if($riga['image'] == ""){
-                    echo "<img width='90' height='100' src='immagini/default.jpg' alt='Default Profile Pic'>";
-                    } else {
-                            echo "<img width='90' height='100' src='immagini/".$riga['image']."' alt='Profile Pic'>";
-                           }
-                            echo "<br>";
-                        }
-             	$username = $_SESSION['username'];
+			<?php
+				$username = $_SESSION['username'];
 				$password = $_SESSION['password'];
 				$strsql = "select * from clienti where username ='$username' and password ='$password'";
 				$risultato = mysqli_query($conn, $strsql);
@@ -81,18 +73,19 @@ include_once('mysql-fix.php');
 					   echo "Cliente non presente" . "<br>";
 					}
 				  else
-					{   
+					{
+					   
 			?>
 				<form action="modificaprofilo.php" method="POST" >
 				   <p><span class="capo">Nome: <input readonly name="nome" type="text" value="<?php echo $riga["nome"]?>"></span>
 				   <span class="capo">Cognome: <input readonly name="cognome" type="text" value="<?php echo $riga["cognome"]?>"></span>
-				   <span class="capo">E-mail: <input name="email" type="text" value="<?php echo $riga["email"]?>"></span>
-				   <span class="capo">Username: <input name="username" type="text" value="<?php echo $riga["username"]?>"></span>
-				   <span class="capo">Password: <input name="password" type="text" value="<?php echo $riga["password"]?>"></span>
-				   <span class="capo"><input type="submit" value="modifica dati" name="Invio"></span></p>
+				   <span class="capo">E-mail: <input readonly name="email" type="text" value="<?php echo $riga["email"]?>"></span>
+				   <span class="capo">Username: <input readonly name="username" type="text" value="<?php echo $riga["username"]?>"></span>
+				   <span class="capo">Password: <input readonly name="password" type="text" value="<?php echo $riga["password"]?>"></span>
 				</form>
 			<?php
 					}
+				echo "Profilo modificato con successo!" . "<br>";
 			?>	
 			</div>
 		</div>

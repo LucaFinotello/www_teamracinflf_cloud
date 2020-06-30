@@ -483,7 +483,7 @@ div.itemTotal {
 	-moz-transition: left 0.3s;
 	transition: left 0.3s;
 	/* indichiamo il colore dello sfondo del panello */
-	background: #16a085;
+	background: #c0c0c0;
 	/* indichiamo che sara sopra tutti gli altri elementi della pagina  */
 	z-index: 2000;
 }
@@ -797,7 +797,7 @@ body {
 	bottom: 0;
 	height: 1px;
 	width: 100%;
-	background: #3bc1a0;
+	background: #0000FF;
 	-webkit-transition: width .5s ease;
 	transition: width .5s ease;
 }
@@ -808,7 +808,7 @@ body {
 
 .nav > ul > li > a:hover:before {
 	width: 0%;
-	background: #3bc1a0;
+	background: #0000FF;
 	-webkit-transition: width .5s ease;
 	transition: width .5s ease;
 }
@@ -844,3 +844,21 @@ body {
     transition: opacity .5s, visibility .5s;
 }
 */
+
+@media only screen and (max-width: 414px) {
+	#header h1 {
+		font-size: 26px !important;
+	}
+
+	#contenuto{
+		width: 89%;
+	}
+
+	.tabella {
+		margin-left: 0;
+	}
+
+	#form {
+		width: 80vw;
+	}
+}

@@ -49,7 +49,7 @@
 					echo $riga["nome"];
 				}
 				else{
-					header("location:home1.php");
+					header("location:loggati/home1.php");
 					echo $riga["nome"];
 				}
 			}else{

@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include("db_con.php");
-include_once('mysql-fix.php');
+	include("../db_con.php");
+include_once('../mysql-fix.php');
 	?>	
 	
 <!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-strict.dtd">
@@ -16,8 +16,8 @@ include_once('mysql-fix.php');
 		<meta name="language" content="italian it" />
 		<meta name="author" content="" />
 		<script type="text/javascript" src="jquery-1.3.2.js"></script>
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
-		<script type="text/javascript" src="javascript/simpleCart.js"></script>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<script type="text/javascript" src="../javascript/simpleCart.js"></script>
 		<script type="text/javascript">
 			simpleCart.email = "luca.finotello@gmail.com";
 			simpleCart.checkoutTo = PayPal;
@@ -41,9 +41,9 @@ include_once('mysql-fix.php');
 					<li><a href="news.php">News</a></li>
 					<li><a href="circuiti.php">Circuiti</a></li>
 					<li><a href="vendita biglietti.php">Biglietti</a></li>
-					<li>Negozio moto</li>
+					<li><a href="vendita moto.php">Negozio moto</a></li>
 					<li><a href="contatti.php">Contatti</a></li>
-					<li><a href="feedback.php">Feedback</a></li>
+					<li><a href="../feedback.php">Feedback</a></li>
 				</ul>
 			</div>
 		<div id="contenuto">
@@ -56,10 +56,10 @@ include_once('mysql-fix.php');
 						?></a>
 					   <ul>
 							<li><a href="profilo.php">Modifica profilo</a></li>
-							<li><a href="modifica.php">Modifica password</a></li>
-							<li><a href="feedback1.php">Feedback</a></li>
+							<li><a href="../modifica.php">Modifica password</a></li>
+							<li><a href="../feedback1.php">Feedback</a></li>
 							<li><a href="elimina.php">Elimina account</a></li>
-							<li><a href="logout.php">Logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -89,36 +89,39 @@ include_once('mysql-fix.php');
 					</div>
 				</div>
 			<?php
-					$strsql = "select * from infomoto";
+				$marca = $_POST["marca"];
+				$modello = $_POST["modello"];
+				$anno = $_POST["anno"];
+				$strsql = "select * from infomoto where marca='$marca' or modello='$modello' or anno='$anno'";
 				$risultato = mysqli_query($conn, $strsql);
 				if (! $risultato)
 				  {
-				   echo "Errore nella select" . "<br>";
+				   echo "Errore nel comando SQL" . "<br>";
 				  }
 				$riga = mysqli_fetch_array($risultato);
 				if (! $riga)
-			    {
-				  echo "nessuna moto inserita";
-				}
-				else
-				{
-				 while ($riga)
-					{
-						echo "<div class='simpleCart_shelfItem last'><form action='dettagli2.php' method='POST'>";
-						echo "<div class='Box_Contenitore'><span class='capo'>Marca:  <input readonly name='marca' type='text' value=".$riga["marca"]."></span>";
-						echo "<input readonly name='id_info' type='text' value=".$riga["id_info"]." hidden='false'>";
-						echo "<span class='capo'>Modello:  <input readonly name='modello' type='text' value=".$riga["modello"]."></span>";
-						echo "<span class='capo'>Anno:  <input readonly name='anno' type='text' value=".$riga["anno"]."></span>";
-						echo "<span class='capo'>Prezzo: <strong class='item_price'> ".$riga["prezzo"]." &euro;</strong></span>";
-						echo "<img src='immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'><span class='capo'></p> ";  
-						echo "<input type='submit' name='dettagli' value='dettagli' />";
-						echo "</form>";
-						echo " <input type='button' class='item_add' value='aggiungi' /></div></div>";
-						$riga = mysqli_fetch_array($risultato);
-					}
+				  {
+				   echo "Nessun prodotto corrisponde alla ricerca." . "<br>";
+				  }
+				 else
+				 {
+					 while ($riga)
+							{
+								echo "<div class='simpleCart_shelfItem last'><form action='dettagli2.php' method='POST'>";
+								echo "<div class='Box_Contenitore'><span class='capo'>Marca:  <input readonly name='marca' type='text' value=".$riga["marca"]."></span>";
+								echo "<input readonly name='id_info' type='text' value=".$riga["id_info"]." hidden='false'>";
+								echo "<span class='capo'>Modello:  <input readonly name='modello' type='text' value=".$riga["modello"]."></span>";
+								echo "<span class='capo'>Anno:  <input readonly name='anno' type='text' value=".$riga["anno"]."></span>";
+								echo "<span class='capo'>Prezzo: <strong class='item_price'> ".$riga["prezzo"]." &euro;</strong></span>";
+								echo "<img src='immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'><span class='capo'></p> ";  
+								echo "<input type='submit' name='dettagli' value='dettagli' />";
+								echo "</form>";
+								echo " <input type='button' class='item_add' value='aggiungi' /></div></div>";
+								$riga = mysqli_fetch_array($risultato);
+							}
 				}
 				?>
-		</div>
+				</div>
 		</div>
 	</div>
 	<div id="footer">

@@ -27,16 +27,16 @@ include_once('mysql-fix.php');
 		<div id="main">
 			<div id="menu"> 
 				<ul>
-					<li><a href="home1.php">Home</a></li>
-					<li><a href="classifica.php">Classifica</a></li>
-					<li><a href="news.php">News</a></li>
-					<li><a href="circuiti.php">Circuiti</a></li>
-					<li><a href="contatti.php">Contatti</a></li>
+					<li><a href="loggati/home1.php">Home</a></li>
+					<li><a href="loggati/classifica.php">Classifica</a></li>
+					<li><a href="loggati/news.php">News</a></li>
+					<li><a href="loggati/circuiti.php">Circuiti</a></li>
+					<li><a href="loggati/contatti.php">Contatti</a></li>
 					<li><a href="feedback.php">Feedback</a></li>
 				</ul>
 			</div>
 		<div id="contenuto">
-			<span id="path">Ti trovi in: <a href="home1.php">Home</a> &#187; Modifica password</span>
+			<span id="path">Ti trovi in: <a href="loggati/home1.php">Home</a> &#187; Modifica password</span>
 			<div class="container">
 				<div class="menu1">
 					<ul>
@@ -44,9 +44,9 @@ include_once('mysql-fix.php');
 									$q = mysqli_query($conn, "SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
 						?></a>
 						   <ul>
-								<li><a href="profilo.php">Modifica profilo</a></li>
+								<li><a href="loggati/profilo.php">Modifica profilo</a></li>
 								<li><a href="modifica.php">modifica password</a></li>
-								<li><a href="elimina.php">Elimina account</a></li>
+								<li><a href="loggati/elimina.php">Elimina account</a></li>
 								<li><a href="logout.php">Logout</a></li>
 							</ul>
 						</li>
