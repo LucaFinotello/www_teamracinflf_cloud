@@ -475,7 +475,7 @@ div.itemTotal {
 	bottom: 0;
 	margin: 0;
 	/* spostiamo(nascondiamo)il pannello rispetto bordo sinistro della pagina  */
-	left: -320px;
+	left: -365px;
 	/* spazzi interni */
 	padding: 15px 20px;
 	/* regoliamo la uscita del panello  */
@@ -495,7 +495,7 @@ div.itemTotal {
 
 .nav-toggle {
 	/* posizionamento assoluto*/
-	position: absolute;
+	/*position: absolute;*/
 	/* rispetto bordo sinistro del pannello  */
 	left: 320px;
 	/* rispetto bordo superiore  */
@@ -507,7 +507,7 @@ div.itemTotal {
     */
 	background: inherit;
 	/* colore del testo */
-	color: #dadada;
+	color: #000000;
 	/* tipo del cursore */
 	cursor: pointer;
 	/* altezza del font */
