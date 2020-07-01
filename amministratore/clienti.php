@@ -31,7 +31,7 @@
 					<th>E-mail</th>
 					<th>Username</th>
 					<th>Password</th>
-                    <th colspan="2">Azioni</th>
+                    <th>Azioni</th>
 				</tr>
 			<?php
 			while ($riga)
@@ -57,8 +57,4 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
-		Area Amministratore
-	</div>
-</body>
-</html>
+<?php include ('footerAmmnistratore.html'); ?>
