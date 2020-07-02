@@ -77,14 +77,10 @@
 				if (! $risultato)
 				  {
 				   echo "Errore nel comando SQL" . "<br>";
-				  }
-				echo "cliente CANCELLATO con successo!" . "<br>";
+				  } else {
+                    header("location:clienti.php");
+                }
 			?>
-			<p><a href="clienti.php">Visualizza</a></p>
 		</div>
 	</div>
-	<div id="footer">
-		Area Amministratore
-	</div>
-</body>
-</html>
+<?php include ('footerAmmnistratore.html'); ?>

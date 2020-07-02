@@ -37,7 +37,7 @@
 			<?php
 					}
 			?>	
-				<p><a href="ricercacircuiti.php"><button>Annulla</button></a></p>
+				<p><a href="circuiti.php"><button>Annulla</button></a></p>
 		</div>
 	</div>
 <?php include ('footerAmmnistratore.html'); ?>
