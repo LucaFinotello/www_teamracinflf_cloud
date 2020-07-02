@@ -34,13 +34,13 @@ include ('header.html');
 			while ($riga)
 			 {
 			   echo ("<tr>");
-                 echo "<form action='ricercacircuito.php' method='POST'>";
+                 echo "<form action='ricercamototre.php' method='POST'>";
                  echo "<input type='text' class='inputDati' name='id' value='". $riga['id']."' hidden/>";
 			   echo "<td>".$riga["pilota"]."</td>";
 			   echo "<td>".$riga["team"]."</td>";
 			   echo "<td>".$riga["punti"]."</td>";
                  echo "<td><button type='submit'>Modifica</button></form>";
-                 echo "<form action='cancellaclient.php' method='post'>";
+                 echo "<form action='cancellamoto3.php' method='post'>";
                  echo "<input type='text' class='inputDati' name='id' value='". $riga['id']."' hidden/>";
                  echo "<button type='submit'>Elimina</button></form></td>";
 			   echo ("</tr>");

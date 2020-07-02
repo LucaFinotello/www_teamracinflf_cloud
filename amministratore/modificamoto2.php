@@ -21,7 +21,7 @@ include ('header.html');
                     header("location:moto2.php");
                 }
 			?>
-            <p><a href="motogp.php"><button>Annulla</button></a></p>
+            <p><a href="moto2.php"><button>Annulla</button></a></p>
 		</div>
 	</div>
 <?php include ('footerAmmnistratore.html'); ?>
