@@ -13,21 +13,25 @@
 			$email = $_POST['email'];
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-			if($_POST["username"] != "" && $_POST["password"]!= "" && $_POST["nome"] != "" && $_POST["cognome"] != "" 
-			&& $_POST["email"] != "")
-			{
-			$query_registrazione = mysqli_query($conn, "INSERT INTO clienti set username,password,nome,cognome, email)
-			VALUES ('".$_POST["username"]."','".$_POST["password"]."','".$_POST["nome"]."','".$_POST["cognome"]."','".$_POST["email"]."')")
-			or die ("query di registrazione non riuscita".mysqli_error());
-			}else{
+            if($_POST["username"] != "" && $_POST["password"]!= "" && $_POST["nome"] != "" && $_POST["cognome"] != ""
+                && $_POST["email"] != "") {
+                $strsql = "insert into clienti set username='$username', password='$password', nome= '$nome',cognome= '$cognome', email = '$email' ";
+                $risultato = mysqli_query($conn, $strsql);
+                if (!$risultato) {
+                    echo "Errore nel comando SQL" . "<br>";
+                } else {
+                    header("location:inserimentomotogp.php");
+                }
+            }else{
 			include ('formRegistrazione.html');
 			echo "<p>Non sono stati inseriti tutti i campi neccessari alla registrazione</p>";
 			}
-			if(isset($query_registrazione)){
+
+			if(isset($strsql)){
 			$_SESSION["logged"]=true;
                 header("location:entra.php");
 			}else{
-			echo "<p>Registrazione non avvenuta</p>";
+                header("location:entra.php");
 			}
 		?>
 		</div>
