@@ -851,7 +851,7 @@ body {
 	}
 
 	#contenuto{
-		width: 89%;
+		width: 100%;
 	}
 
 	.tabella {
@@ -864,5 +864,19 @@ body {
 
 	.container{
 		display: none;
+	}
+
+	h2 {
+		font-size: 13px;
+	}
+
+	.Box_Contenitore {
+		width: 39vw;
+		height: 22vh;
+	}
+
+	.Box_Contenitore img {
+		width: 16vw;
+		height: 11vh;
 	}
 }

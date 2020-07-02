@@ -32,7 +32,7 @@
 						Stato: <input name="stato" type="text" value="<?php $_POST['stato']?>" required/>
 						Paese: <input name="paese" type="text" value="<?php $_POST['paese']?>" required/>
 						<input type="submit" name="invia" value="invia">
-						<<input type="reset" name="annulla" value="annulla">
+						<input type="reset" name="annulla" value="annulla">
 					</fieldset>
 				</form>
 				<?php
