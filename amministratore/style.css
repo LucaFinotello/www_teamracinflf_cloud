@@ -205,4 +205,9 @@ textarea {
 	#header h1 {
 		font-size: 25px;
 	}
+
+	.menu ul li {
+		/*width:9.5em;
+		height: 1.7em;*/
+	}
 }

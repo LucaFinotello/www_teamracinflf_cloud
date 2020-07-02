@@ -879,4 +879,8 @@ body {
 		width: 16vw;
 		height: 11vh;
 	}
+
+	#menu li {
+		height: 7vh;
+	}
 }
