@@ -210,4 +210,24 @@ textarea {
 		/*width:9.5em;
 		height: 1.7em;*/
 	}
+
+	h2 {
+		font-size: 13px;
+	}
+
+	.Box_ContenitoreOverflow {
+		height: 8vh;
+		width: 37vw;
+		margin-top: 8%;
+	}
+
+	.Box_Contenitore {
+		width: 39vw;
+		height: 30vh;
+	}
+
+	.Box_Contenitore img {
+		width: 16vw;
+		height: 11vh;
+	}
 }

@@ -1,10 +1,11 @@
 <?php
 	session_start();
 	include("db_con.php");
+    include_once('mysql-fix.php');
 	include("header.html")
 ?>
 	<div id="main">
-		<?php include ('menuDesktopAmministratore.html') ?>
+		<?php include ('menuDesktopAmministratore.html'); ?>
 		<div id="contenuto">
 			<?php
 				$id = $_POST["id"];
@@ -38,4 +39,4 @@
 				<p><a href="clienti.php"><button>Annulla</button></a></p>
 		</div>
 	</div>
-<?php include "footerAmmnistratore.html"; ?>
+<?php include ('footerAmmnistratore.html'); ?>

@@ -2,10 +2,10 @@
 	session_start();
 	include("db_con.php");
     include_once('mysql-fix.php');
-    include ('header.html');
+	include("header.html")
 ?>
 	<div id="main">
-        <?php include('menuDesktopAmministratore.html'); ?>
+		<?php include ('menuDesktopAmministratore.html'); ?>
 		<div id="contenuto">
 			<?php
 				$id = $_POST["id"];
