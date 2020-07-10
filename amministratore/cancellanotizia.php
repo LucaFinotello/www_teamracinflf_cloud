@@ -9,7 +9,7 @@
 		<div id="contenuto">
 		<?php
 			$id = $_POST["id"];
-			$strsql = "delete from news where data= '$data' and id= '$id'";
+			$strsql = "delete from news where id= '$id'";
 			$risultato = mysqli_query($conn, $strsql);
 			if (! $risultato)
 			  {
@@ -18,7 +18,6 @@
                 header("location:news.php");
             }
 		?>
-		<p><a href="news.php">Visualizza</a></p>
 		</div>
 	</div>
 <?php include ('footerAmmnistratore.html'); ?>

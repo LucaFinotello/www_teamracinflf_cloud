@@ -39,7 +39,7 @@
                       <input name='id' value='".$riga["id"]."' hidden/>
                       <button type='submit'>Modifica</button>
                     </form>
-                    <form action='cancellanew.php' method='post'>
+                    <form action='cancellanotizia.php' method='post'>
                       <input name='id' value='".$riga["id"]."' hidden/>
                        <button type='submit'>elimina</button>
                     </form></td>";
