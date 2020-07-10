@@ -7,7 +7,7 @@
 		<div id="main">
 			<?php include ('findDevice.php') ?>
 		<div id="contenuto">
-			<span id="path">Ti trovi in: <a href="home1.php">Home</a> &#187; Info moto</span>
+			<span id="path">Ti trovi in: <a href="home1.php">Home</a> &#187; Circuiti</span>
 			<div class="container">
 			<div class="menu1">
 				<ul>
