@@ -50,7 +50,7 @@
 			 {
 			   echo ("<tr>");
 			   echo "<td>".$riga["data"]."</td>";
-			    echo "<td>".$riga["news"]."</td>";
+			   echo "<td><div id='link'><p class='short'>".$riga["news"]."</p></div></td>";
 			   echo ("</tr>");
 			   $riga = mysqli_fetch_array($risultato);
 			 }
@@ -63,3 +63,12 @@
 <?php
 include ('footer.html');
 ?>
+
+<script>
+    $(document).ready(function () {
+        $("#def .short").readmore();
+        $("#len .short").readmore({ substr_len: 50 });
+        $("#link .short").readmore({ more_link: '<a class="more something"><button>Leggi tutto</button></a>' });
+
+    });
+</script>

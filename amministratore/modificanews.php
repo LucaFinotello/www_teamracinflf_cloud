@@ -19,7 +19,6 @@
                     header("location:news.php");
                 }
 			?>
-			<a href="news.php">Visualizza </a>
 		</div>
 	</div>
 <?php include ('footerAmmnistratore.html'); ?>
