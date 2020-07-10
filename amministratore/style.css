@@ -167,7 +167,7 @@ textarea {
 	width:21em;
 	overflow:scroll;
 	position:absolute;
-	margin-top:2%;
+	margin-top:3%;
 }
 .Box_Contenitore img{
 	margin:0 auto;
@@ -199,6 +199,11 @@ textarea {
 	background: transparent;
 	border: none;
 	text-align: center;
+}
+
+.elimina {
+	width: 18%;
+	float: right;
 }
 
 @media only screen and (max-width: 414px) {

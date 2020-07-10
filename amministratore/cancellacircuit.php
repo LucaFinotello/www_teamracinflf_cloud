@@ -19,7 +19,6 @@
                 }
 
 			?>
-			<p><a href="circuiti.php">Visualizza</a></p>
 		</div>
 	</div>
 <?php include ('footerAmmnistratore.html'); ?>

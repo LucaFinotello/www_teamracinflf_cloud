@@ -28,12 +28,11 @@
 						echo "<input readonly name='id' type='text' value=".$riga["id"]." hidden='false'>";
 						echo "<img src='../immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'>";
 						echo "<div class='Box_ContenitoreOverflow'>" .$riga["descrizione"]."</div>";
-						echo "<button type='sumbit'>Modifica</button>
-                              <form action='cancellacircuito.php' method='post'>";
+						echo "<button type='sumbit'>Modifica</button></form>
+                              <form action='cancellacircuit.php' method='post' class='elimina'>";
                         echo "<input readonly name='id' type='text' value=".$riga["id"]." hidden='false'>";
                         echo "<button type='submit'>Elimina</button> </form>";
                         echo "</div>";
-						echo "</form>";
 						$riga = mysqli_fetch_array($risultato);
 					}
 				}

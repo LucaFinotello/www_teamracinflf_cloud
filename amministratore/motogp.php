@@ -42,7 +42,7 @@
 			   echo "<td>".$riga["team"]."</td>";
 			   echo "<td>".$riga["punti"]."</td>";
 			   echo "<td><button type='submit'>Modifica</button></form>";
-			   echo "<form action='cancellamotogp.php' method='post'>";
+			   echo "<form action='cancellamotog.php' method='post'>";
 			   echo "<input type='text' class='inputDati' name='id' value='". $riga['id']."' hidden/>";
 			   echo "<button type='submit'>Elimina</button></form></td>";
 			   echo ("</tr>");
