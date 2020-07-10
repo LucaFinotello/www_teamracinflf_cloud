@@ -10,7 +10,7 @@ include ('header.html');
 		<div id="contenuto">
 			<h2>Inserimento nuova notizia</h2>  
 			<form action="inserimentonotizia.php" method="POST" >
-				 <p><span class="capo">Codice: <input name="codice" type="text" value=""></span>
+				 <p>
 				 <span class="capo">Data: <?php echo $today=date("j-n-Y");?></span>
 				 <span class="capo">Notizia: <textarea name="news" ></textarea></span>
 				 <span class="capo"><input type="submit" value="Inserisci" name="Invio">

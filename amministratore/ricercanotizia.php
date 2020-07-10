@@ -25,9 +25,9 @@
 					   echo "Modificare notizia" . "<br>" ;
 				  ?>
 		   <form action="modificanews.php" method="POST" >
-			   <p><span class="capo">Data: <input readonly name="data" type="text" value="<?php echo $riga["data"]?>"></span>
+			   <p><span class="capo">Data: <input readonly name="data" type="text" value="<?php echo $riga["data"]?>" ></span>
 			   <span class="capo"><input name="id" type="text" value="<?php echo $riga["id"]?>" hidden/></span>
-			   <span class="capo">Notizia: <textarea name="news" value="<?php echo $riga["news"]?>"></textarea></span>
+			   <span class="capo">Notizia: <textarea name="news" value="<?php echo $riga["news"]?>"><?php echo $riga["news"]?></textarea></span>
 			   <span class="capo"><input type="submit" value="Invia" name="Invio"></span></p>
 		   </form>
 		   <?php

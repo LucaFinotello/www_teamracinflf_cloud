@@ -9,13 +9,12 @@ include ('header.html');
     <?php include ('menuDesktopAmministratore.html');?>
 		<div id="contenuto">
 			<?php
-				$codice = $_POST["codice"];
 				$news = $_POST["news"];
-				$strsql = "insert into news (codice, data, news) values ('$codice', NOW() , '$news')";
+				$strsql = "insert into news (data, news) values (NOW() , '$news')";
 				$risultato = mysqli_query($conn, $strsql);
 				if (! $risultato)
 				  {
-				   echo "Verificare il codice sia inserito correttamente" . "<br>";
+				   echo "Verificare che i valori siano inseriti correttamente" . "<br>";
 				  }
 				  else
 				  {
