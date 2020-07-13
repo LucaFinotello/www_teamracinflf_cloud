@@ -37,7 +37,6 @@
 		<?php
 			$_SESSION["username"]=$_POST["username"];
 			$_SESSION["password"]=$_POST["password"];
-            $user_reg = 1;
 			$query = mysqli_query( $conn, "SELECT * FROM clienti WHERE username='".$_POST["username"]."' AND password ='".$_POST["password"]."'")
 			or DIE('query non riuscita'.mysqli_error());
 			if(mysqli_num_rows($query)>0)
@@ -49,13 +48,26 @@
 				{
 					header("location:amministratore/clienti.php");
 				}
-				else{
-				    if ($user_reg == '1') {
-                        header("location:loggati/home1.php");
-                    } else {
-				        echo '<br><br>Account da confermare. Controlla l\'email.';
+				else {
+
+                    $strsql = "SELECT * FROM clienti WHERE username='" . $_POST["username"] . "'";
+                    $risultato = mysqli_query($conn, $strsql);
+                    if (!$risultato) {
+                        echo "Errore nel comando SQL" . "<br>";
                     }
-				}
+                    $riga = mysqli_fetch_array($risultato);
+                    if (!$riga) {
+                        echo " Nessuna classifica attualmente presente";
+                    } else {
+                        $user_reg = $riga['user_reg'];
+                        //echo $user_reg;
+                        if ($user_reg == '1') {
+                            header("location:loggati/home1.php");
+                        } else {
+                            echo '<br><br>Account da confermare. Controlla l\'email.';
+                        }
+                    }
+                }
 			}else{
 		?>
 		<div id="form">

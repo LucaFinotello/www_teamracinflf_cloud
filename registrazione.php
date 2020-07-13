@@ -20,8 +20,6 @@
                 if (!$risultato) {
                     echo "Errore nel comando SQL" . "<br>";
                 } else {
-
-
                     $to = $_POST["email"];
                     $toname = $_POST["cognome"] . "" . $_POST["nome"];
                     $subject = "Completa la tua registrazione";
@@ -39,43 +37,33 @@
                     $html_msg .= "</td></tr><tr><td>Password: <font color=\"red\">" . $password . "</font>";
                     $html_msg .= "</td></tr><tr><td align=\"center\">&nbsp;";
                     $html_msg .= "</td></tr></table></center>";
-                    $confirmmessage = "Salve " . $toname . ",\n\n";
+                    $confirmmessage = "Salve". " " . $toname . ",\n\n";
                     $confirmmessage .= "per completare la tua registrazione devi cliccare sul link sottostante:\n\n";
                     $confirmmessage .= $html_msg . "\n\n";
 
-//$confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
-$confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
-$message = "This is a Multipart Message in MIME format\n";
-$message .= "--$boundary\n";
-$message .= "Content-type: text/html; charset=iso-8859-1\n";
-$message .= "Content-Transfer-Encoding: 7bit\n\n";
-$message .= $confirmmessage . "\n";
-$message .= "--$boundary--";
-$mailsent = mail($to, $subject, $message, $headers);
-if ($mailsent)
-{
-    echo "<br><br>Salve" .  $toname . ",<br>";
-    echo "Un messaggio è stato inviato all'indirizzo <b>" . $to . "</b> da te fornito.<br><br>";
-    echo "IMPORTANTE:<br>";
-    echo "Per completare la registrazione al sito devi aprire la tua casella e-mail, leggere il messaggio di conferma e cliccare sul link che troverai all'interno.<br><br>";
-} else {
-    echo "Errore durante l'invio dell'e-mail.";
-}
-
-
-                    //header("location:home.php");
+                    $confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
+                    //$confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
+                    $message = "This is a Multipart Message in MIME format\n";
+                    $message .= "--$boundary\n";
+                    $message .= "Content-type: text/html; charset=iso-8859-1\n";
+                    $message .= "Content-Transfer-Encoding: 7bit\n\n";
+                    $message .= $confirmmessage . "\n";
+                    $message .= "--$boundary--";
+                    $mailsent = mail($to, $subject, $message, $headers);
+                    if ($mailsent)
+                    {
+                        echo "<br><br>Salve" .  $toname . ",<br>";
+                        echo "Un messaggio è stato inviato all'indirizzo <b>" . $to . "</b> da te fornito.<br><br>";
+                        echo "IMPORTANTE:<br>";
+                        echo "Per completare la registrazione al sito devi aprire la tua casella e-mail, leggere il messaggio di conferma e cliccare sul link che troverai all'interno.<br><br>";
+                    } else {
+                        echo "Errore durante l'invio dell'e-mail.";
+                    }
                 }
             }else{
 			include ('formRegistrazione.html');
 			echo "<p>Non sono stati inseriti tutti i campi neccessari alla registrazione</p>";
 			}
-
-			/*if(isset($strsql)){
-			$_SESSION["logged"]=true;
-                header("location:entra.php");
-			}else{
-                header("location:entra.php");
-			}*/
 		?>
 		</div>
 	</div>
