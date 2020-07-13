@@ -43,7 +43,8 @@
                     $confirmmessage .= "per completare la tua registrazione devi cliccare sul link sottostante:\n\n";
                     $confirmmessage .= $html_msg . "\n\n";
 
-$confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
+//$confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
+$confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
 $message = "This is a Multipart Message in MIME format\n";
 $message .= "--$boundary\n";
 $message .= "Content-type: text/html; charset=iso-8859-1\n";
