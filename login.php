@@ -37,20 +37,24 @@
 		<?php
 			$_SESSION["username"]=$_POST["username"];
 			$_SESSION["password"]=$_POST["password"];
+            $user_reg = 1;
 			$query = mysqli_query( $conn, "SELECT * FROM clienti WHERE username='".$_POST["username"]."' AND password ='".$_POST["password"]."'")
 			or DIE('query non riuscita'.mysqli_error());
 			if(mysqli_num_rows($query)>0)
 			{
 				$row = mysqli_fetch_assoc($query);
 				$_SESSION["logged"] =true;
+
 				if($_POST["username"]=="admin" and $_POST["password"]=="nimda")
 				{
 					header("location:amministratore/clienti.php");
-					echo $riga["nome"];
 				}
 				else{
-					header("location:loggati/home1.php");
-					echo $riga["nome"];
+				    if ($user_reg == '1') {
+                        header("location:loggati/home1.php");
+                    } else {
+				        echo '<br><br>Account da confermare. Controlla l\'email.';
+                    }
 				}
 			}else{
 		?>
