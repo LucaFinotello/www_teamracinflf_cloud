@@ -26,10 +26,11 @@
 			</div>
 			</div>
 			<div id="field">
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 				<form action="ricerca1.php" method="POST">
 					<fieldset>
 						<legend>ricerca circuito</legend>
-						Circuito: <input name="circuito" type="text" value="" required/>
+						Circuito: <input name="circuito" type="search" value="" required/>
 						Stato: <input name="stato" type="text" value="" required/>
 						Paese: <input name="paese" type="text" value="" required/>
 						<input type="submit" name="invia" value="invia">
@@ -54,7 +55,7 @@
 			     while ($riga)
 					{
 						echo "<form action='dettagli1.php' method='POST'>";
-						echo "<div class='Box_Contenitore'><h2>".$riga["circuito"]."</h2>";
+						echo "<div id='myMenu' class='Box_Contenitore'><h2>".$riga["circuito"]."</h2>";
 						echo "<input readonly name='id' type='text' value=".$riga["id"]." hidden='false'>";
 						echo "<img src='../immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'>";
 						echo "<input type='submit' name='dettagli' value='dettagli' /></div>";
@@ -69,3 +70,20 @@
 <?php
     include ('footer.html');
 ?>
+
+<script>
+    function myFunction() {
+        var input, filter, div, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myMenu");
+        for (i = 0; i < div.length; i++) {
+            a = div[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                div[i].style.display = "";
+            } else {
+                div[i].style.display = "none";
+            }
+        }
+    }
+</script>
