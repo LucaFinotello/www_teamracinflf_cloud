@@ -2,7 +2,7 @@
 include("db_con.php");
 include ('header.html');
 $id = $_GET['id'];
-$sql = "SELECT * FROM clienti WHERE nome = '$id'";
+$sql = "SELECT * FROM clienti WHERE cf = '$id'";
 
 $query = mysqli_query($conn, $sql) or die(mysql_error());
 

@@ -10,12 +10,13 @@
 			<?php
 			$nome = $_POST['nome'];
 			$cognome = $_POST['cognome'];
+			$cf = $_POST['cf'];
 			$email = $_POST['email'];
 			$username = $_POST['username'];
 			$password = $_POST['password'];
             if($_POST["username"] != "" && $_POST["password"]!= "" && $_POST["nome"] != "" && $_POST["cognome"] != ""
                 && $_POST["email"] != "") {
-                $strsql = "insert into clienti set username='$username', password='$password', nome= '$nome',cognome= '$cognome', email = '$email' ";
+                $strsql = "insert into clienti set username='$username', password='$password', nome= '$nome',cognome= '$cognome', email = '$email', cf= '$cf'";
                 $risultato = mysqli_query($conn, $strsql);
                 if (!$risultato) {
                     echo "Errore nel comando SQL" . "<br>";
@@ -41,8 +42,8 @@
                     $confirmmessage .= "per completare la tua registrazione devi cliccare sul link sottostante:\n\n";
                     $confirmmessage .= $html_msg . "\n\n";
 
-                    $confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
-                    //$confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$nome'> qui </a>per confermare la tua registrazione";
+                    $confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$cf'> qui </a>per confermare la tua registrazione";
+                    //$confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$cf'> qui </a>per confermare la tua registrazione";
                     $message = "This is a Multipart Message in MIME format\n";
                     $message .= "--$boundary\n";
                     $message .= "Content-type: text/html; charset=iso-8859-1\n";
