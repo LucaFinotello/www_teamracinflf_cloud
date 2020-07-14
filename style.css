@@ -252,7 +252,7 @@ th {
 
 /* Inizio Profilo*/
 
-#profilo{
+#profilo, #classifica {
 	background: #969696;
 	margin-top:2em;
 	padding-top:5%;
@@ -629,6 +629,10 @@ body {
 	.nav {
 		width: 100%;
 		box-shadow: none
+	}
+
+	#classifica {
+		padding-left: 0 !important;
 	}
 }
 

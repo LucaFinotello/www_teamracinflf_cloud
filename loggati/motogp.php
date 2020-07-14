@@ -24,7 +24,7 @@
 				</ul>
 			</div>
 			</div>
-			<div id="profilo">
+			<div id="classifica">
 			<?php
 				$strsql = "select * from motogp order by punti DESC";
 				$risultato = mysqli_query($conn, $strsql);
