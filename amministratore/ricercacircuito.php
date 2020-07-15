@@ -24,11 +24,11 @@
 					{
 					   echo "Modifica Circuito:" . "<br>" ;
 			?>
-				<form action="modificacircuiti.php" method="POST" >
+				<form action="modificacircuiti.php" method="POST" enctype="multipart/form-data">
 				   <p>
-                   <input type='text' name="id" value="<?php echo $riga["id"]?>"/>
+                   <input type='text' name="id" value="<?php echo $riga["id"]?>" hidden/>
                    <span class="capo">Circuito: <input readonly name="circuito" type="text" value="<?php echo $riga["circuito"]?>"></span>
-				   <span class="capo">Immagine: <input name="immagine" type="text" value="<?php echo $riga["immagine"]?>"></span>
+				   <span class="capo">Immagine: <input type="file" value="scegli immagine" name="image" /></span>
 				   <span class="capo">Descrizione: <textarea cols="100" rows="100" name="descrizione" value="<?php echo $riga["descrizione"]?>"><?php echo $riga["descrizione"]?></textarea></span>
 				   <span class="capo">Stato: <input name="stato" type="text" value="<?php echo $riga["stato"]?>"></span>
 				   <span class="capo">Paese: <input name="paese" type="text" value="<?php echo $riga["paese"]?>"></span>
