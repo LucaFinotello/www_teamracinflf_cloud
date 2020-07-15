@@ -206,6 +206,10 @@ textarea {
 	float: right;
 }
 
+.weblog {
+	width: 90vw;
+}
+
 @media only screen and (max-width: 414px) {
 	#header h1 {
 		font-size: 25px;

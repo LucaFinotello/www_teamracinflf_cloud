@@ -612,6 +612,10 @@ body {
  * per dispositivi medie e piccoli
  */
 
+.weblog {
+	margin-top: 4vh;
+}
+
 @media screen and (min-width: 320px) {
 	html,
 	body {
