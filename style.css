@@ -895,12 +895,12 @@ body {
 
 @media (min-width: 992px){
 	.container{
-		width: 15vw !important;
+		width: 11vw !important;
 	}
 }
 
 @media (min-width: 768px){
 	.container {
-		width: 15vw !important;
+		width: 11vw !important;
 	}
 }

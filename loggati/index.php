@@ -30,9 +30,9 @@ include('header.html')
 	<div class="page-header">
 		<div class="pull-right form-inline">
 			<div class="btn-group">
-				<button class="btn btn-primary" data-calendar-nav="prev"><< Ieri</button>
+				<button class="btn btn-primary" data-calendar-nav="prev"><< Precedente</button>
 				<button class="btn btn-default" data-calendar-nav="today">Oggi</button>
-				<button class="btn btn-primary" data-calendar-nav="next">Domani >></button>
+				<button class="btn btn-primary" data-calendar-nav="next">Successivo >></button>
 			</div>
 			<div class="btn-group">
 				<button class="btn btn-warning" data-calendar-view="year">Anno</button>
