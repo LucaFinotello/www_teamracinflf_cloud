@@ -285,7 +285,7 @@ th {
 .Box_Contenitore {
 	border:1px solid #87CEEB;
 	margin:0.5%;
-	padding:2%;
+	padding: 0 20px;
 	display:inline;
 	width:34vw;
 	height:35vh;
@@ -298,6 +298,11 @@ th {
 	display:block;
 	width:16em;
 	height:11em;
+}
+
+.Box_Contenitore h2 {
+	font-size: 25px;
+	margin-top: 11px;
 }
 
 /* Fine Circuiti*/	

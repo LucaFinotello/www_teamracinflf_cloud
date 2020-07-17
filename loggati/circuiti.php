@@ -26,7 +26,6 @@
 			</div>
 			</div>
 			<div id="field">
-                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 				<form action="ricerca1.php" method="POST">
 					<fieldset>
 						<legend>ricerca circuito</legend>
