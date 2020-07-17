@@ -6,7 +6,7 @@
 		<div id="main">
             <?php include('findDevice.php') ?>
 		<div id="contenuto">
-			<span id="path">Ti trovi in:  <a href="home.php">Home</a> &#187; Iscrizione</span> </span>
+			<span id="path">Ti trovi in:  <a href="index.php">Home</a> &#187; Iscrizione</span> </span>
 			<?php
 			$nome = $_POST['nome'];
 			$cognome = $_POST['cognome'];

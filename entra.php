@@ -6,7 +6,7 @@
     <div id="main">
         <?php include('findDevice.php') ?>
         <div id="contenuto">
-            <span id="path">Ti trovi in: <a href="home.php">Home</a> &#187; Login</span>
+            <span id="path">Ti trovi in: <a href="index.php">Home</a> &#187; Login</span>
             <div id="form">
                 <form action="login.php" method="POST">
                     <p><span class="capo">Username: <input name="username" type="text"/></span>

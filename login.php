@@ -27,13 +27,13 @@
 		<div id="main">
 			<div id="menu"> 
 				<ul>
-					<li><a href="home.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="iscrizione.php">Iscrizione</a></li>
 					<li>Login</li>
 				</ul>
 			</div>
 		<div id="contenuto">
-			<span id="path">Ti trovi in: <a href="home.php">Home</a> &#187; Login</span>
+			<span id="path">Ti trovi in: <a href="index.php">Home</a> &#187; Login</span>
 		<?php
 			$_SESSION["username"]=$_POST["username"];
 			$_SESSION["password"]=$_POST["password"];
