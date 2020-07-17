@@ -26,7 +26,7 @@
 			<span id="path">Ti trovi in: <a href="home1.php">Home</a> &#187; News</span>
 			<div id='notizia'>
 			<?php
-			$strsql = "select * from news";
+			$strsql = "select * from tblpost";
 			$risultato = mysqli_query($conn, $strsql);
 			if (! $risultato)
 			  {
@@ -59,16 +59,17 @@
 			<?php } ?>
 			</div>
 		</div>
+            <script>
+                $(document).ready(function () {
+                    $("#def .short").readmore();
+                    $("#len .short").readmore({ substr_len: 50 });
+                    $("#link .short").readmore({ more_link: '<a class="more something"><button>Leggi tutto</button></a>' });
+
+                });
+            </script>
 	</div>
 <?php
 include ('footer.html');
 ?>
 
-<script>
-    $(document).ready(function () {
-        $("#def .short").readmore();
-        $("#len .short").readmore({ substr_len: 50 });
-        $("#link .short").readmore({ more_link: '<a class="more something"><button>Leggi tutto</button></a>' });
 
-    });
-</script>

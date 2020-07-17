@@ -11,7 +11,6 @@ body{
 }
 
 #header{
-	padding-top:2%;
 	width:90%;
 	margin:0 auto;
 	height:3em;
@@ -860,7 +859,12 @@ body {
 
 @media only screen and (max-width: 414px) {
 	#header h1 {
+		margin-top: 0;
 		font-size: 26px !important;
+	}
+
+	#header {
+		border-bottom: 2px solid #0000FF;
 	}
 
 	#contenuto{
@@ -884,8 +888,13 @@ body {
 	}
 
 	.Box_Contenitore {
-		width: 39vw;
+		width: 44vw;
 		height: 22vh;
+		padding: 0px 9px;
+	}
+
+	.Box_Contenitore h2 {
+		font-size: 10px;
 	}
 
 	.Box_Contenitore img {
@@ -895,6 +904,10 @@ body {
 
 	#menu li {
 		height: 7vh;
+	}
+
+	#classifica {
+		padding: 2%;
 	}
 }
 
