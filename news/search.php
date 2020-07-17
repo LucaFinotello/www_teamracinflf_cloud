@@ -1,34 +1,29 @@
-<?php 
+<?php
 session_start();
-error_reporting(0);
 include('includes/config.php');
-
-    ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>News Portal | Search  Page</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Page Content -->
-    <div class="container">
+include('../db_con.php');
+include('../loggati/header.html');
+?>
+<div id="main">
+    <?php include ('../loggati/findDevice.php'); ?>
+    <div id="contenuto">
+        <span id="path">Ti trovi in: <a href="home1.php">Home</a> &#187; News</span>
+        <div class="container">
+            <div class="menu1">
+                <ul>
+                    <li><a href="#"><?php echo $_SESSION['username'];
+                            $q = mysqli_query($conn,"SELECT * FROM clienti WHERE username = '".$_SESSION['username']."'");
+                            ?></a>
+                        <ul>
+                            <li><a href="profilo.php">Modifica profilo</a></li>
+                            <li><a href="modifica.php">Modifica password</a></li>
+                            <li><a href="elimina.php">Elimina account</a></li>
+                            <li><a href="../logout.php">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
       <div class="row" style="margin-top: 4%">
 
@@ -75,10 +70,6 @@ while ($row=mysqli_fetch_array($query)) {
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
               <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="btn btn-primary">Leggi tutto &rarr;</a>
             </div>
-            <div class="card-footer text-muted">
-              Posted on <?php echo htmlentities($row['postingdate']);?>
-           
-            </div>
           </div>
 <?php } ?>
 
@@ -112,16 +103,12 @@ while ($row=mysqli_fetch_array($query)) {
     </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-      <?php include('includes/footer.php');?>
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
- 
-</head>
-  </body>
-
-</html>
+</div>
+</div>
+<?php
+include ('../loggati/footer.html')
+?>
