@@ -41,7 +41,7 @@
 		</div>
 		<div id="contatti">
 				<p><span class="capo"><img src="../immagini/posto.png"> Indirizzo: <a href="https://www.google.it/maps/dir/45.1512556,12.1042598/45.1513323,12.104263/@45.1516158,12.0995452,17z/data=!4m2!4m1!3e2?hl=it&authuser=0"> Via mondonovo, 54 Cavarzere 30014 (VE)</a></span>
-				<span class="capo"><img src="../immagini/tel.png"> Telefono: <a href="tel:+393401572273">340/1572273</a></span>
+				<span class="capo"><img src="../immagini/tel.png"> Telefono: <a href="tel:+393450382340">345/0382340</a></span>
 				<span class="capo"><img src="../immagini/busta.png"> E-mail: teamracinglf@gmail.com</span></p>
 			</div>
 	</div>

@@ -620,6 +620,8 @@ body {
 	margin-top: 4vh;
 }
 
+.btn-group>.btn.active {z-index: 0 !important;}
+
 @media screen and (min-width: 320px) {
 	html,
 	body {
