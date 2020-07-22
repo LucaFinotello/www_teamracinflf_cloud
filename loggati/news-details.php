@@ -73,7 +73,7 @@ while ($row=mysqli_fetch_array($query)) {
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
               <hr />
 
- <img class="img-fluid rounded" style="max-width: 30vw" src="../immagini/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
+ <img class="img-fluid rounded" style="max-width: 30vw" src="<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
   
               <p class="card-text"><?php 
 $pt=$row['postdetails'];

@@ -52,7 +52,7 @@ include('../loggati/header.html');
                   <div class="card mb-4" style="border: 1px solid;
     padding: 1%;
     margin-bottom: 2%;">
-                    <img class="card-img-top" style="max-width:30vw" src="../immagini/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
+                    <img class="card-img-top" style="max-width:30vw" src="<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
                     <div class="card-body">
                       <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
 

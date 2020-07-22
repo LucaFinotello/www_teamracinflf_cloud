@@ -8,7 +8,7 @@
 		<?php include ('menuDesktopAmministratore.html') ?>
 		<div id="contenuto">
 		<?php
-			$strsql = "select * from news order by data";
+			$strsql = "select * from tblposts";
 			$risultato = mysqli_query($conn, $strsql);
 			if (! $risultato)
 			  {
@@ -33,8 +33,8 @@
 			while ($riga)
 			 {
 			   echo ("<tr>");
-			   echo "<td>".$riga["data"]."</td>";
-			   echo "<td><div id='link'><p class='short'>".$riga["news"]."</p></div></td>";
+			   echo "<td>".$riga["PostingDate"]."</td>";
+			   echo "<td><div id='link'><p class='short'>".$riga["PostTitle"]."</p></div></td>";
 			   echo "<td><form action='ricercanotizia.php' method='post'>
                       <input name='id' value='".$riga["id"]."' hidden/>
                       <button type='submit'>Modifica</button>

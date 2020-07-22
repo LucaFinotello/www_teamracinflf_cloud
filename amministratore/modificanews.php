@@ -10,7 +10,8 @@
 		<?php
 				$id = $_POST["id"];
 				$news = $_POST["news"];
-				$strsql = "update news set news = '$news' where id = '$id'";
+				$titolo = $_POST["titolo"];
+				$strsql = "update tblposts set PostDetails = '$news', PostTitle= '$titolo' where id = '$id'";
 				$risultato = mysqli_query($conn, $strsql);
 				if (!$risultato)
 				  {

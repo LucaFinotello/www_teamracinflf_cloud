@@ -9,7 +9,7 @@
 		<div id="contenuto">
 		<?php
 			$id = $_POST["id"];
-			$strsql = "delete from news where id= '$id'";
+			$strsql = "delete from tblposts where id= '$id'";
 			$risultato = mysqli_query($conn, $strsql);
 			if (! $risultato)
 			  {
