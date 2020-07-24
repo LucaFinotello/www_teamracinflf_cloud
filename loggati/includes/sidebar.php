@@ -6,9 +6,9 @@
                    <form name="search" action="search.php" method="post">
               <div class="input-group">
            
-        <input type="text" name="searchtitle" class="form-control" placeholder="Cerca per..." required>
+        <input type="text" name="searchtitle" class="form-control" style="z-index: 0" placeholder="Cerca per..." required>
                 <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="submit">Vai</button>
+                  <button class="btn btn-secondary" type="submit" style="z-index: 0">Vai</button>
                 </span>
               </form>
               </div>
