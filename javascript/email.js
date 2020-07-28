@@ -17,5 +17,10 @@ function Email() {
   }
   else {
     location.href = "mailto:" + email + "?Subject=" + oggetto + "&Body=" + messaggio;
+    //invio automatico email da testare
+    /*if(mail('teamracinglf@gmail.com', oggetto, messaggio))
+         {echo 'la mail è stata spedita con successo';}
+else  
+         {echo 'la mail non è stata inviata';}*/
   }
 }
