@@ -68,7 +68,7 @@
                 if ($size > $max_size) {
                     echo "Dimensione del file troppo grande<br />";
                 }
-                echo '<a href="/uploader/index.php">Torna all\'uploader</a>';
+                echo '<a href="/uploader/inserimentoCalendario.php">Torna all\'uploader</a>';
 
             }
 

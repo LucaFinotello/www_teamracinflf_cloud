@@ -29,12 +29,32 @@
 
 
 
-    <!-- Bootstrap core CSS
-    <link href="../news/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="jquery-ui.css" rel="stylesheet">
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery-ui.js"></script>
+    <!--<script src="lang/datepicker-it.js"></script>-->
+    <script>
+        $(function() {
+            <!--$.datepicker.setDefaults($.datepicker.regional['it']);-->
+            $( "#from" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#to" ).datepicker( "option", "minDate", selectedDate );
+                }
+            });
+            $( "#to" ).datepicker({
+                defaultDate: "+1w",
+                regional: "it",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+                }
+            });
+        });  </script>
 
-    <!-- Custom styles for this template
-    <link href="../news/css/modern-business.css" rel="stylesheet">-->
-    <!-- jQuery -->
 <body>
 <div id="header">
     <h1>Team racing Luca & c.</h1>

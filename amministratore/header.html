@@ -15,6 +15,33 @@
     <link rel="shortcut icon" href="../immagini/favicon.ico" type="image/x-icon"/>
     <script type="text/javascript" src="../javascript/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="../javascript/jquery.readmore.js"></script>
+
+
+    <link href="jquery-ui.css" rel="stylesheet">
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery-ui.js"></script>
+    <!--<script src="lang/datepicker-it.js"></script>-->
+    <script>
+        $(function() {
+            <!--$.datepicker.setDefaults($.datepicker.regional['it']);-->
+            $( "#from" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#to" ).datepicker( "option", "minDate", selectedDate );
+                }
+            });
+            $( "#to" ).datepicker({
+                defaultDate: "+1w",
+                regional: "it",
+                changeMonth: true,
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+                }
+            });
+        });  </script>
 </head>
 <body>
 <div id="header">

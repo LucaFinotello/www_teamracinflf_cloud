@@ -62,7 +62,7 @@ include ('header.html');
                 if ($size > $max_size) {
                     echo "Dimensione del file troppo grande<br />";
                 }
-                echo '<a href="/uploader/index.php">Torna all\'uploader</a>';
+                echo '<a href="/uploader/inserimentoCalendario.php">Torna all\'uploader</a>';
             }
             $tmp = $_FILES['image']['tmp_name'];
             $type = $_FILES['image']['type'];
