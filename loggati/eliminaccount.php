@@ -15,25 +15,10 @@ include ('header.html');
 				if (! $risultato)
 				  {
 				   echo "Errore nel comando SQL" . "<br>";
-				  }
-				echo "<h2>L'UNICO SERVIZIO ON LINE IN CUI PUOI TROVARE DI TUTTO SU MOTO E SCOOTER</h2>
-			<div class='tabella'>
-				<table>
-					<tr>
-						<th>Cognome</th>
-						<th>Nome</th>
-						<th>E-mail</th>
-					</tr>
-					<tr>
-						<td> Finotello </td>
-						<td> Luca </td>
-						<td> <a href='contatti.php'>luca.finotello@gmail.com</a> </td>
-					</tr>
-				</table>
-			</div>
-			<p>In questo sito troverete qualsiasi informazione su moto, sia dei giorni nostri ma anche moto d'epoca.
-			In caso di mancate informazioni contatateci via e-mail. RISPONDEREMO AL PI&Ugrave; PRESTO.</p> 
-			<p> Ci trovate anche su facebook </p>"
+				  } else {
+				    header("location:../index.php");
+                }
+
 			?>    
 		</div>
 	</div>
