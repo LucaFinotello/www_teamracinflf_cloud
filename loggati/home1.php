@@ -44,7 +44,7 @@ include('header.html')
 			<p>In questo sito troverete qualsiasi informazione su moto, sia dei giorni nostri ma anche moto d'epoca.
 			In caso di mancate informazioni contatateci via e-mail. RISPONDEREMO AL PI&Ugrave; PRESTO.</p> 
 			<p> Ci trovate anche su facebook </p>
-			&nbsp
+			<br>
             <a href="../TeamRacing">
                 <div class="Box_Contenitore">
                     <img src="../immagini/teamracing.png"> TeamRacing App

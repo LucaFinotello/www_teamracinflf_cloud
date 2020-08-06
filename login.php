@@ -1,38 +1,11 @@
 <?php
-	session_start();
-	include("db_con.php");
-    include_once('mysql-fix.php');
+session_start();
+include("db_con.php");
+include ('header.html');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-strict.dtd">
-<html>
-	<head>
-		<link rel="icon" href="immagini/favicon.ico" />
-		<title>Login- Team rancing</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="title" content="" />
-		<meta name="description" content="Home page del sito del progetto" />
-		<meta name="keywords" content="team-racing" />
-		<meta name="language" content="italian it" />
-		<meta name="author" content="" />
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower" rel="stylesheet" type="text/css" />
-		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Shadows+Into+Light+Two|Cherry+Cream+Soda|Cinzel+Decorative" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="immagini/favicon.ico" type="image/x-icon"/>
-	</head>	
-	<body>
-	<div id="header">
-		<h1>Team racing Luca & c.</h1>
-	</div>
-		<div id="main">
-			<div id="menu"> 
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="iscrizione.php">Iscrizione</a></li>
-					<li>Login</li>
-				</ul>
-			</div>
-		<div id="contenuto">
+<div id="main">
+    <?php include('findDevice.php') ?>
+    <div id="contenuto">
 			<span id="path">Ti trovi in: <a href="index.php">Home</a> &#187; Login</span>
 		<?php
 			$_SESSION["username"]=$_POST["username"];
@@ -70,21 +43,54 @@
                 }
 			}else{
 		?>
-		<div id="form">
-				<form action="login.php" method="POST">
-					<p><span class="capo">Username: <input name="username" type="text"/></span>
-					<span class="capo">Password: <input name="password" type="password"/></span>
-					<input type="submit" title="login" value="Login" name="Login"/></p>
-				</form>
-			</div>
-		<?php
-			echo "Username o password errati";
-			}
-		?>
-		</div>
-	</div>
-	<div id="footer">
-		Veniteci a trovare
-	</div>
-	</body>
-</html>
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'login')" id="defaultOpen">Login</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Registrati</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="login" class="tabcontent">
+                    <div id="form">
+                        <form action="login.php" method="POST">
+                            <p><span class="capo">Username: <input name="username" type="text"/></span>
+                                <span class="capo">Password: <input name="password" type="password"/></span>
+                                <input type="submit" title="login" value="Login" name="Login"/></p>
+                        </form>
+                        <?php
+                        echo "Username o password errati";
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <div id="Paris" class="tabcontent">
+                    <?php include ('formRegistrazione.html') ?>
+                </div>
+    </div>
+</div>
+<?php include ('footer.html');?>
+<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>

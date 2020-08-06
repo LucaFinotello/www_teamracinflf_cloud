@@ -89,7 +89,7 @@ include ('header.html');
 
                     $strsql = "insert into tblposts set PostTitle= '$titolo', PostDetails= '$dettagli', PostingDate = NOW(), UpdationDate = NOW(), 
                             Is_Active= '$active', PostUrl= '$titolo', PostImage= '$name'";
-                    $risultato = mysqli_query($conn, $strsql);
+                    $risultato = mysqli_query($conn, $strsql) or die (mysqli_error($conn));
                     if (! $risultato)
                     {
                         echo "Verificare che i valori siano inseriti correttamente" . "<br>";
