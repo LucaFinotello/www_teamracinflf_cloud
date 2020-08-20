@@ -22,7 +22,7 @@
                     echo "Errore nel comando SQL" . "<br>";
                 } else {
                     $to = $_POST["email"];
-                    $toname = $_POST["cognome"] . "" . $_POST["nome"];
+                    $toname = $_POST["cognome"] . " " . $_POST["nome"];
                     $subject = "Completa la tua registrazione";
 
                     $boundary = "==MP_Bound_xyccr948x==";
@@ -42,8 +42,8 @@
                     $confirmmessage .= "per completare la tua registrazione devi cliccare sul link sottostante:\n\n";
                     $confirmmessage .= $html_msg . "\n\n";
 
-                    //$confirmmessage .= "Clicca <a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$cf'> qui </a>per confermare la tua registrazione";
-                    $confirmmessage .= "Clicca <a href='https://www.teamracinglf.cloud/conferma.php"."?id=$cf'> qui </a>per confermare la tua registrazione";
+                    $confirmmessage .= "<a href='http://127.0.0.1/www_teamracinglf_cloud/conferma.php"."?id=$cf'>Clicca qui per confermare la tua registrazione</a>";
+                    //$confirmmessage .= "<a href='https://www.teamracinglf.cloud/conferma.php"."?id=$cf'> Clicca qui per confermare la tua registrazione</a>";
                     $message = "This is a Multipart Message in MIME format\n";
                     $message .= "--$boundary\n";
                     $message .= "Content-type: text/html; charset=iso-8859-1\n";
@@ -53,7 +53,7 @@
                     $mailsent = mail($to, $subject, $message, $headers);
                     if ($mailsent)
                     {
-                        echo "<br><br>Salve" .  $toname . ",<br>";
+                        echo "<br><br>Salve " .  $toname . ",<br>";
                         echo "Un messaggio è stato inviato all'indirizzo <b>" . $to . "</b> da te fornito.<br><br>";
                         echo "IMPORTANTE:<br>";
                         echo "Per completare la registrazione al sito devi aprire la tua casella e-mail, leggere il messaggio di conferma e cliccare sul link che troverai all'interno.<br><br>";
