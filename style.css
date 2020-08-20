@@ -308,6 +308,9 @@ th {
 }
 
 .Box_Contenitore h2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	font-size: 25px;
 	margin-top: 11px;
 }

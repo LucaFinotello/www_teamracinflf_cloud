@@ -54,7 +54,7 @@
 			     while ($riga)
 					{
 						echo "<form action='dettagli1.php' method='POST'>";
-						echo "<div id='myMenu' class='Box_Contenitore'><h2>".$riga["circuito"]."</h2>";
+						echo "<div id='myMenu' class='Box_Contenitore'><h2 title='".$riga["circuito"]."'>".$riga["circuito"]."</h2>";
 						echo "<input readonly name='id' type='text' value=".$riga["id"]." hidden='false'>";
 						echo "<img src='../immagini/".$riga["immagine"]."' alt='".$riga["immagine"]."'>";
 						echo "<input type='submit' name='dettagli' value='dettagli' /></div>";

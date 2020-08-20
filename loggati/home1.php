@@ -2,7 +2,7 @@
 	session_start();
 	include("../db_con.php");
     include_once('../mysql-fix.php');
-include('header.html')
+    include('header.html')
 ?>
 		<div id="main">
 			<?php
