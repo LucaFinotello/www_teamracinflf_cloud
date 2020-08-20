@@ -82,7 +82,6 @@ include ('header.html');
                 $name = $folder.$name; //aggiungo il folder di destinazione
                 //esempio risultato finale: folder/timestamp657.gif
                 if(move_uploaded_file($tmp,$name)) {
-
                     $titolo = $_POST["titolo"];
                     $dettagli = $_POST["dettagli"];
                     $active = 1;
@@ -100,18 +99,10 @@ include ('header.html');
                     }
                 } else {
                     echo "Non è stato possibile caricare l'immagine<br />";
-                    echo '';
                 }
             } else {
-
                 get_error($tmp, $type, $size, $max_size);
-
             }
-
-
-
-
-
 			?>
 		</div>
 	</div>

@@ -84,7 +84,7 @@ else{
                         <label for="eM_subject">Oggetto :</label>
                         <input type="text" name="eM_subject" id="eM_subject" required value="" placeholder="Oggetto email" size="50"><br>
                         <label for="eM_body">Messaggio :</label>
-                        <input type="text" name="eM_body" id="eM_body" required value="" placeholder="Inserisci testo" size="50"><br>
+                    <textarea type="text" name="eM_body" id="eM_body" required value="" placeholder="Inserisci testo" size="50"></textarea><br>
                         <input name="submit" type="submit" id="submit" formaction="contatti.php" formenctype="multipart/form-data" formmethod="POST" value="Invia">
                 </div>
                 <input type="hidden" name="eM_TO2" value="">
