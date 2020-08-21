@@ -9,18 +9,16 @@
 		<div id="contenuto">
 			<?php
                 $id = $_POST["id"];
-				$nome = $_POST["nome"];
-				$cognome = $_POST["cognome"];
-				$email = $_POST["email"];
-				$username = $_POST["username"];
-				$password = $_POST["password"];
-				$strsql = "update clienti set email = '$email', username= '$username', password='$password' where id = '$id'";
+				$titolo = $_POST["titolo"];
+				$descrizione = $_POST["descrizione"];
+				print_r ($_POST);
+				$strsql = "update home set titolo = '$titolo', descrizione= '$descrizione' where id = '$id'";
 				$risultato = mysqli_query($conn, $strsql);
 				if (!$risultato)
 				  {
-				   echo "Errore nel comando SQL" . "<br>";
+				   echo "Errore nel comando SQL";
 				  }else {
-                    header("location:clienti.php");
+                    header("location:homePage.php");
                 }
 			?>
 		</div>
