@@ -17,19 +17,11 @@
                 $riga = mysqli_fetch_array($risultato);
                 if (! $riga)
                 {
-                    echo "Pagina in costruzione" . "<br>";
+                    echo "<br>Pagina in costruzione" . "<br>";
                 }
                 else
                 {
                     echo $riga["titolo"];
-                    ?>
-                    <video width="640" height="480" controls autoplay loop>
-                        <source src="immagini/sigla-divino-pernat-motogp-tv8-2017.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <br><br>
-                    <?php
                     echo $riga["descrizione"];
                 } ?>
             </div>
